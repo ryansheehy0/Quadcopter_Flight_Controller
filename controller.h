@@ -1,7 +1,8 @@
 #pragma once
 
 #include "stm32f4xx_hal.h"
-#include <cstint>
+#include <stdint.h>
+#include <cstdio>
 
 struct ControllerValues {
 	bool isValid;

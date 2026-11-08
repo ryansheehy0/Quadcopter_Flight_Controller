@@ -2,7 +2,6 @@
 
 #include "stm32f4xx_hal.h"
 #include <stdint.h>
-#include <cstdio>
 
 struct ControllerValues {
 	bool isValid;
@@ -21,6 +20,14 @@ struct RotationRates { // In degrees/sec
 	float roll;
 	float yaw;
 };
+
+// Instructions
+// 1. Set up UART via CubeMX
+// 2. Connect top right pin(of the top row when looking face on at the pins) of FS-iA6B to pin A10(RX pin)
+// 3. Connect the next pin to the left of the top right pin to 5v
+//    Note: 5v may not be at 5 volts if powered through ST-LINK. This will beep your controller.
+// 4. Connect the next pin to the left of that to G
+// So the top right 3 pins of the top row should all be connected.
 
 class Controller {
 	private:

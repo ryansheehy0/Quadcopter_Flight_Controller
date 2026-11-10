@@ -10,7 +10,6 @@ A quadcopter flight controller using STM32 Black Pill.
 - Get gyro data
 - Get controller data
 - If controller data isn't valid, set motors to 0 after a short delay of 1.5sec
-	- Error: When the controller disconnects it still gives back isValid true.
 - PID with gyro being measured and controller being the set point
 	- PID outputs clamped to -1 to 1 for pitch, roll, and yaw.
 	- Have pots change P and D values for pitch, roll, and yaw.

@@ -29,6 +29,16 @@ struct RotationRates { // In degrees/sec
 // 4. Connect the next pin to the left of that to G
 // So the top right 3 pins of the top row should all be connected.
 
+// Uses for left and right pots
+// 1. PD values
+//    Left: P values
+//    Right: D values
+// 2. Max rotation rates
+//    Left: Pitch & Roll
+//    Right: Yaw
+// NOTE: The code knows the controller has disconnected if the left and right pots are both set to 0.
+//       Do not have the normal use case for both pots be set in 0 positions.
+
 class Controller {
 	private:
 		UART_HandleTypeDef* uart_;

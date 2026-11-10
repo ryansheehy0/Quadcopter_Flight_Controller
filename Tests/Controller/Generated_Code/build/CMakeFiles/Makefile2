@@ -97,8 +97,8 @@ cmake/stm32cubemx/clean: cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/cle
 # Target rules for target CMakeFiles/Generated_Code.dir
 
 # All Build rule for target.
-CMakeFiles/Generated_Code.dir/all: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/all
 CMakeFiles/Generated_Code.dir/all: cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir/all
+CMakeFiles/Generated_Code.dir/all: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Generated_Code.dir/build.make CMakeFiles/Generated_Code.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Generated_Code.dir/build.make CMakeFiles/Generated_Code.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/ryan/250GB/Quadcopter_Flight_Controller/Tests/Controller/Generated_Code/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target Generated_Code"

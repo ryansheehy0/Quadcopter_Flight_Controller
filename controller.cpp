@@ -48,6 +48,22 @@ ControllerValues Controller::getValues() {
 		values.throttle = (channels[2] - 1000) / 1000.0f;
 		values.leftPot  = (channels[4] - 1000) / 1000.0f;
 		values.rightPot = (channels[5] - 1000) / 1000.0f;
+
+		// Check if the controller has disconnected
+		if (values.leftPot < 0.001f && values.rightPot < 0.001f) break; // Controller disconnected
+			// How to change the failsafe values on the FS-iA6B receiver
+			// 1. Connect controller to receiver.
+			// 2. Hold OK
+			// 3. System Setup -> RX Setup -> Failsafe
+			// 4. Set failsafes my clicking ok, setting it with the sticks or pot, then make sure it's set to ON
+			//    Channel 1: Roll
+			//    Channel 2: Pitch
+			//    Channel 3: Throttle
+			//    Channel 4: Yaw
+			//    Channel 5: Left pot (currently set to -100%)
+			//    Channel 6: Right pot (currently set to -100%)
+			// 5. Hold CANCEL to save changes
+		
 		// Normalize from -1 to 1
 		float normalizedPitch = (static_cast<int>(channels[1]) - 1500) / 500.0f;
 		float normalizedRoll  = (static_cast<int>(channels[0]) - 1500) / 500.0f;
